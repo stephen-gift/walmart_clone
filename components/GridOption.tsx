@@ -11,14 +11,14 @@ function GridOption({ title, className, image }: Props) {
   return (
     <Link
       href={{
-        pathname: "/",
+        pathname: "/search",
         query: {
           q: title,
         },
       }}
       className={cn("gridOption relative", className)}
     >
-      <h2>{title}</h2>
+      <h2 className="text-xl font-bold">{title}</h2>
 
       {image && (
         <Image

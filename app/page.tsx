@@ -4,7 +4,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="">
-      <div>
+      <div
+        className="grid grid-cols-1 grid-flow-row-dense md:grid-cols-4 gap-6 m-6"
+      >
         <GridOption
           title="Sweet gifts for less"
           image="https://links.papareact.com/1dy"
@@ -61,7 +63,6 @@ export default function Home() {
           className="bg-orange-200 h-64 col-span-2"
         />
       </div>
-      <h1>Lets build a Walmart Clone</h1>
     </main>
   );
 }
