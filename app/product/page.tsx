@@ -49,7 +49,7 @@ async function ProductPage({ searchParams: { url } }: Props) {
         opts={{
           loop: true,
         }}
-        className="w-3/5 mb-10 lg:mb-0 lg:w-full self-center flex items-center max-w-xl mx-auto lg:mx-20"
+        className="w-3/5 mb-10 lg:mb-0 lg:w-full self-start flex items-center max-w-xl mx-auto lg:mx-20"
       >
         <CarouselContent>
           {product.images?.map((image, i) => (
