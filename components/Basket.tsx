@@ -6,6 +6,7 @@ import { useCartStore } from "@/store";
 import React from "react";
 import AddToCart from "./AddToCart";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 function Basket() {
   const cart = useCartStore((state) => state.cart);
@@ -53,6 +54,16 @@ function Basket() {
           );
         })}
       </ul>
+
+      <div className="flex flex-col justify-end p-5">
+        <p className="font-bold text-2xl text-right text-walmart mb-5">
+          Total: {basketTotal}
+        </p>
+
+        <Button className="mt-5 h-20 bg-walmart hover:bg-walmart/50">
+          Checkout
+        </Button>
+      </div>
     </div>
   );
 }
