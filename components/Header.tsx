@@ -96,7 +96,7 @@ function Header() {
             <p className="text-xs font-extralight">
               {cart.length > 0 ? `${cart.length} items` : "No items"}
             </p>
-            <p>{total}</p>
+            <p>{cart.length > 0 ? `${total}` : "0"}</p>
           </div>
         </Link>
       </div>
