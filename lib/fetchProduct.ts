@@ -1,6 +1,5 @@
 import { ProductContent } from "@/typings/productTypings";
 
-
 async function fetchProduct(url: string) {
   const username = process.env.OXYLABS_USERNAME;
   const password = process.env.OXYLABS_PASSWORD;
@@ -32,8 +31,9 @@ async function fetchProduct(url: string) {
     .then((data) => {
       if (data.results.length === 0) return;
       const result: ProductContent = data.results[0];
+      const product = result.content;
 
-      return result;
+      return product;
     })
     .catch((err) => {
       console.error(err);
