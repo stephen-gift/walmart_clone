@@ -1,4 +1,4 @@
-// import Basket from "@/components/Basket"
+import Basket from "@/components/Basket";
 import { ShoppingCartIcon } from "lucide-react";
 
 const BasketPage = () => {
@@ -13,7 +13,7 @@ const BasketPage = () => {
       </p>
 
       {/* Basket */}
-      {/* <Basket /> */}
+      <Basket />
     </div>
   );
 };
