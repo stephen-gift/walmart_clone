@@ -18,6 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import AddToCart from "@/components/AddToCart";
 
 type Props = {
   searchParams: {
@@ -102,9 +103,9 @@ async function ProductPage({ searchParams: { url } }: Props) {
         </p>
 
         {/* Add to Cart Button */}
-        {/* <AddToCart
+        <AddToCart
           product={product}
-        /> */}
+        />
 
         <hr />
 
