@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: "**.papareact.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "**.walmartimages.com",
+        port: "",
+      },
     ],
   },
 };
