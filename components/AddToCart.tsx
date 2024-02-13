@@ -19,6 +19,7 @@ function AddToCart({ product }: { product: Product }) {
   ).length;
 
   const handleAdd = () => {
+    console.log("Adding to cart", product);
     addToCart(product);
   };
 
@@ -36,7 +37,11 @@ function AddToCart({ product }: { product: Product }) {
     );
   }
 
-  return <div>AddToCart</div>;
+  return (
+    <Button className="bg-walmart hover:bg-walmart/50" onClick={handleAdd}>
+      Add to Cart
+    </Button>
+  );
 }
 
 export default AddToCart;
