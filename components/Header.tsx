@@ -14,10 +14,13 @@ import {
 import { FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "@/store";
+import { getCartTotal } from "@/lib/getCartTotal";
 
 function Header() {
   const router = useRouter();
   const cart = useCartStore((state) => state.cart);
+  const total = getCartTotal(cart);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -90,8 +93,10 @@ function Header() {
         >
           <ShoppingCart size={20} />
           <div>
-            <p className="text-xs font-extralight">No Items</p>
-            <p>$0.00</p>
+            <p className="text-xs font-extralight">
+              {cart.length > 0 ? `${cart.length} items` : "No items"}
+            </p>
+            <p>{total}</p>
           </div>
         </Link>
       </div>
