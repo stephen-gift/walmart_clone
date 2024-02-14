@@ -5,6 +5,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "**.google.com",
+        port: "",
+      },
+      {
+        protocol: "https",
         hostname: "**.papareact.com",
         port: "",
       },
